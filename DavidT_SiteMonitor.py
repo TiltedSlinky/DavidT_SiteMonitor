@@ -4,7 +4,7 @@ import time
 import smtplib
 
 while True:
-	url = "http://Google.com/"
+	url = raw_input("Enter Link(http(s)://...): ") #so that users can choose a site of their choice. DAVID PLEASE ACCEPT THIS
 	headers = {'User-Agent': 'Mozilla/5.0 (Macinstosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 	response = requests.get(url, headers=headers) #Download Homepage
 	soup = BeautifulSoup(response.text, "lxml") # Analyze site and grab all text
