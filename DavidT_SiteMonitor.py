@@ -20,10 +20,7 @@ while True:
 		server = smtplib.SMTP('smtp.gmail.com', 587)
 		server.starttls()
 		server.login("soreal.gmail.org", "passwo0rd")
-		
-		print('From: ' + fromaddr)
-		print('To: ' + str(toaddrs))
-		print('Message: ' + msg)
+
 		
 		server.sendmail(fromaddr, toaddrs, msg)
 		server.quit()
